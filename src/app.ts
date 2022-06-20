@@ -80,7 +80,7 @@ app.get("/import-product", (_req, res) => {
                   images:pimages
               }
           };
-          const r = await client.post({
+          await client.post({
             path: 'products',
             data: body,
             type: DataType.JSON,
